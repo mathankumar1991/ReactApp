@@ -1,6 +1,6 @@
 node(){
 		stage('SCM Code Checkout'){
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/mathankumar1991/Maven.git']]])		
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/mathankumar1991/ReactApp.git']]])		
 	}
 	stage('Build Automation'){
 		sh """

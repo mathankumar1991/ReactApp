@@ -1,0 +1,15 @@
+node(){
+		stage('SCM Code Checkout'){
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/mathankumar1991/Maven.git']]])		
+	}
+	stage('Build Automation'){
+		sh """
+			ls -lart
+			mvn clean install
+		"""
+	}
+	//stage('Code Deployment'){
+		//deploy adapters: [tomcat9(credentialsId: 'TomcatCreds', path: '', url: 'http://192.168.1.14:8088/')], contextPath: 'webapp', onFailure: false, war: '**/*.war'
+	//}	
+	
+}

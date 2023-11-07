@@ -30,7 +30,7 @@ export default function App() {
           <Route path="/About">
             <About />
           </Route>
-          <Route path="/users">
+          <Route path="/Users">
             <Users />
           </Route>
           <Route path="/">
